@@ -8,24 +8,27 @@ package ca.sheridancollege.project;
  *
  * @author tybutler
  */
-public class Dealer {
-    private String name;
-    private Hand hand;
+public class Dealer extends Player {
 
-    public Dealer(String name, Hand hand) {
-        this.name = name;
-        this.hand = hand;
+    public Dealer(String name) {
+        super(name);
     }
-    
-    public int getHandValue(){
-        return hand.getHandValue();
+
+    @Override
+    public void play() {
+        // Implement dealer's play logic here
+        // For example, in Blackjack, the dealer usually hits until their hand value is 17 or higher
     }
-    
-    public Hand getHand(){
-        return hand;
+    @Override
+    public int getHandValue() {
+        return getHand().getHandValue();
     }
-    
-    public void addCard(Card card){
-        hand.addCard(card);
+    @Override
+    public Hand getHand() {
+        return super.getHand();
+    }
+    @Override
+    public void addCard(Card card) {
+        super.addCard(card);
     }
 }
