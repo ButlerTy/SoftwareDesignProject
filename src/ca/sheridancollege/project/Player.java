@@ -14,14 +14,16 @@ package ca.sheridancollege.project;
 public abstract class Player {
 
     private String name; //the unique name for this player
+    private Hand hand;
 
     /**
      * A constructor that allows you to set the player's unique ID
      *
      * @param name the unique ID to assign to this player.
      */
-    public Player(String name) {
+    public Player(String name, Hand hand) {
         this.name = name;
+        this.hand = hand;
     }
 
     /**
@@ -45,5 +47,17 @@ public abstract class Player {
      * with logic to play your game.
      */
     public abstract void play();
+
+    public Hand getHand() {
+        return hand;
+    }
+
+    public int getHandValue(){
+        return hand.getHandValue();
+    }
+    
+    public void addCard(Card card){
+        hand.addCard(card);
+    }
 
 }

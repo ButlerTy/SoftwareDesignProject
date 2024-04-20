@@ -19,6 +19,21 @@ public abstract class Card {
      *
      * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
      */
+    private int value;
+    
+
+    public Card(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+    
     @Override
     public abstract String toString();
 
