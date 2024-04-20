@@ -18,6 +18,8 @@ public abstract class Game {
 
     private final String name;//the title of the game
     private ArrayList<Player> players;// the players of the game
+    private GroupOfCards deck;
+    private Dealer dealer;
 
     public Game(String name) {
         this.name = name;
@@ -43,6 +45,14 @@ public abstract class Game {
      */
     public void setPlayers(ArrayList<Player> players) {
         this.players = players;
+    }
+    
+    public void declareWinner(){
+        
+    }
+    
+    public void explainRules(){
+        
     }
 
     /**
