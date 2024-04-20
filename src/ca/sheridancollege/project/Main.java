@@ -4,6 +4,8 @@
  */
 package ca.sheridancollege.project;
 
+import java.util.Scanner;
+
 /**
  *
  * @author asus
@@ -11,6 +13,15 @@ package ca.sheridancollege.project;
 public class Main {
 
     public static void main(String[] args) {
+          System.out.print("Welcome TO BlackJack ");
+       Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your username: ");
+        String username = scanner.nextLine();
+
+        System.out.println("Username entered: " + username);
+
+        scanner.close();
         BlackjackGame blackjackGame = new BlackjackGame();
 
         // Create a dealer and add it to the game
@@ -21,13 +32,14 @@ public class Main {
         Player player = new Player("Alice") {
     @Override
     public void play() {
+          blackjackGame.play();
         // Implement play logic for the player
     }
 };
 
 
         // Start the game
-        blackjackGame.play();
+      
     }
 }
 
